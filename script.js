@@ -17,7 +17,7 @@ const MAX_BRIGHTNESS = 255;
 
 function setCanvasSize() {
 	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight * 0.8; // 80% of the window height
+	canvas.height = window.innerHeight * 0.8;
 }
 
 function startVideoStream() {
