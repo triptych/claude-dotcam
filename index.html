@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Video to Dot Grid converter using webcam feed"
+		/>
+		<title>Video to Dot Grid</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<canvas
+			id="canvas"
+			aria-label="Dot grid representation of webcam feed"
+		></canvas>
+		<div id="controls">
+			<button id="pauseResume" aria-label="Pause or Resume video">
+				Pause
+			</button>
+			<button id="takeSnapshot" aria-label="Take a snapshot">
+				Take Snapshot
+			</button>
+			<label for="dotSize"
+				>Dot Size:
+				<input type="range" id="dotSize" min="1" max="10" value="5" />
+			</label>
+			<label for="dotSpacing"
+				>Dot Spacing:
+				<input
+					type="range"
+					id="dotSpacing"
+					min="4"
+					max="16"
+					value="8"
+				/>
+			</label>
+		</div>
+		<div id="errorMessage" aria-live="polite"></div>
+		<div id="loading" aria-live="polite">Initializing camera...</div>
+		<script src="script.js"></script>
+	</body>
+</html>
